@@ -50,7 +50,7 @@ namespace GradeBook.GradeBooks
             }
             else
             {
-                base.CalculateStatistics();
+                base.CalculateStudentStatistics(name);
             }
         }
     }
