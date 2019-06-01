@@ -13,15 +13,23 @@ namespace GradeBook.GradeBooks
 
         public override char GetLetterGrade(double averageGrade)
         {
-            char rankedLetter = 'F';
             if (Students.Count < 5)
             {
-                throw new InvalidOperationException("Gradebook requires 5 Students for Ranked Grades");
-                
+               throw new InvalidOperationException("Gradebook requires 5 Students for Ranked Grades");
             }
-
-
-            return rankedLetter;
+            else
+            {
+                if (averageGrade >= 90)
+                    return 'A';
+                else if (averageGrade >= 80)
+                    return 'B';
+                else if (averageGrade >= 70)
+                    return 'C';
+                else if (averageGrade >= 60)
+                    return 'D';
+                else
+                    return 'F';
+            }
         }
     }
 }
